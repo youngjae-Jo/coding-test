@@ -1,3 +1,5 @@
+//수 받아서 주어진 횟수 만큼 자릿수끼리 교환한 수 중에서 최대의 수
+
 #include <iostream>
 #include <string>
 using namespace std;
