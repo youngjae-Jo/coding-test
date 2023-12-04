@@ -34,7 +34,7 @@ void afterSec(int r1, int r2) {
 			A[i][j] += tmp[i][j];
 	}
 	//위쪽 공기 청정기 : 반시계    아래쪽 : 시계
-	/*int temp1, temp2, temp3, temp4;
+	int temp1, temp2, temp3, temp4;
 	//1
 	temp1 = A[r1][C]; temp2 = A[r2][C];
 	for (int i = 0; i < C-2; i++) {//2~C    
@@ -45,12 +45,12 @@ void afterSec(int r1, int r2) {
 	
 	//2
 	temp3 = A[1][C]; temp4 = A[R][C];		
-	for (int i = 1; i <r1 - 1 ; i++) {
+	for (int i = 1; i <=r1 - 1 ; i++) {
 		A[i][C] = A[i + 1][C];
 	}
 	A[r1 - 1][C] = temp1;
 
-	for (int i = 0; R-i >= 2; i++) { //R-i-1 = r2 + 1까지 
+	for (int i = 0; R-i >= r2+2; i++) { //R-i-1 = r2 + 1까지 
 		A[R - i][C] = A[R - i - 1][C];
 	} 
 	A[r2 + 1][C] = temp2;
@@ -72,7 +72,7 @@ void afterSec(int r1, int r2) {
 	for (int i = 1; r2 + i <= R - 2; i++) {//r2+i = R - 2
 		A[r2 + i][1] = A[r2 + i + 1][1];
 	}
-	A[R - 1][1] = temp2;*/
+	A[R - 1][1] = temp2;
 }
 
 
@@ -92,13 +92,13 @@ int main() {
 	}
 	for(int i = 0; i<T; i++)
 		afterSec(puri_r[0], puri_r[1]);
-	cout << endl;
+	//cout << endl;
 	for (int i = 1; i <= R; i++) {
 		for (int j = 1; j <= C; j++)
-			//sum += A[i][j];
-			cout << A[i][j] << " ";
-		cout << endl;	
+			sum += A[i][j];
+			//cout << A[i][j] << " ";
+		//cout << endl;	
 	}
-	//cout << sum;
+	cout << sum;
 	return 0;
 }
