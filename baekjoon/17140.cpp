@@ -8,11 +8,11 @@ vector<vector<int>> A(4, vector<int>(4));
 //행의 개수<열의 개수 -> 모든 열에 대해서 정렬 , 가장 큰 열 기준으로 모든 열 크기 증가
 //수,등장횟수  등장횟수 커지는 순으로, 여러개면 수가 커지는 순으로
 
-void sort_R() {
+void sort_R() {//행 정렬
 
 }
 
-void sort_C() {
+void sort_C() {//열 정렬
 
 }
 
